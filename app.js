@@ -11,7 +11,7 @@ const password = 'fEVe0SD4lXLmFbpn';
 const dataBaseName = 'smartedu-DB';
 mongoose
   .connect(
-    `mongodb+srv://${userName}:${password}@cluster0.h7szhrx.mongodb.net/test`
+    `mongodb+srv://${userName}:${password}@cluster0.h7szhrx.mongodb.net/${dataBaseName}`
   )
   .then(() => {
     console.log(`You've access to the ${dataBaseName} successfully`);
