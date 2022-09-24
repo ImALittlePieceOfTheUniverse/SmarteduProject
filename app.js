@@ -44,7 +44,7 @@ app.use(
 
 //Routes
 app.use('*', (req, res, next) => {
-  userIn = req.session.userID;
+  userIN = req.session.userID;
   next();
 });
 app.use('/', pageRoute);
