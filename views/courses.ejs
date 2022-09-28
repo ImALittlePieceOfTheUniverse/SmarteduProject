@@ -13,7 +13,7 @@
             <div class="row">
 
 
-              <% for (let i=0; i<courses.length; i++) { %>
+              <% for (let i=0; i< courses.length; i++) { %>
                 <div class="col-lg-6 col-md-6 col-12">
                   <div class="course-item mb-5">
                     <div class="image-blog">
@@ -59,7 +59,7 @@
             <div class="widget-categories">
               <h3 class="widget-title">Categories</h3>
               <ul>
-                <% for (let i=0; i< categories.length; i++) { %>
+                <% for (let i=0; i< courses.length; i++) { %>
                   <li><a href="/courses?categories=<%= categories[i].slug %>">
                       <%= categories[i].name %>
                     </a></li>
