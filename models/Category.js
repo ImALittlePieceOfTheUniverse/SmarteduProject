@@ -1,12 +1,10 @@
 const mongoose = require('mongoose');
 const slugify = require('slugify');
-
 const Schema = mongoose.Schema;
 
 const CategorySchema = new Schema({
   name: {
     type: String,
-    required: true,
     unique: true,
     required: true,
   },

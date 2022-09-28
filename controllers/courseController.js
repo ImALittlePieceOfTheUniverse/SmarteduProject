@@ -1,5 +1,6 @@
 const Course = require('../models/Course');
 const Category = require('../models/Category');
+const user = require('../models/User');
 
 exports.createCourse = async (req, res) => {
   try {
