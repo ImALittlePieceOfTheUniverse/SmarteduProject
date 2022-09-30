@@ -324,7 +324,7 @@
 																		</div>
 																	</div>
 																	<% } %>
-																		<-- <% if(user.role==='Admin' ) { %>
+																		<% if(user.role==='Admin' ) { %>
 
 																			<div class="all-title-box">
 																				<div class="container text-center">
@@ -354,11 +354,64 @@
 
 																								</div>
 
-																							</div><!-- end col -->
-																						</div><!-- end row -->
-																						<div class="row mt-5">
 
+																							</div><!-- end col -->
+																							<div class="row mt-5">
+																								<h2>Users</h2>
+																								<table class="table">
+																									<thead>
+																										<tr>
+																											<th
+																												scope="col">
+																												ID</th>
+																											<th
+																												scope="col">
+																												Name
+																											</th>
+																											<th
+																												scope="col">
+																												E-mail
+																											</th>
+
+																											<th
+																												scope="col">
+																												Delete
+																											</th>
+																										</tr>
+																									</thead>
+																									<tbody>
+																										<% for (let i=0;
+																											i<
+																											users.length;
+																											i++) { %>
+																											<tr>
+																												<th
+																													scope="row">
+																													Kullanıcı
+																													ID:
+																													<%=users[i]._id
+																														%>
+																												</th>
+																												<td>
+																													<%=users[i].email
+																														%>
+																												</td>
+																												<td>
+																													<%=users[i].role
+																														%>
+																												</td>
+																												<td>
+																													<a href="/users/<%= users[i]._id %>?_method=DELETE"
+																														onclick="return confirm('Are you sure you want to delete this course?');"
+																														class="btn btn-danger rounded-5 text-white"><span>Delete</span></a>
+																												</td>
+																											</tr>
+																											<% } %>
+																									</tbody>
+																								</table>
+																							</div><!-- end row -->
 																						</div><!-- end row -->
+
 																					</div><!-- end container -->
 																				</div><!-- end section -->
 
